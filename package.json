@@ -1,7 +1,7 @@
 {
   "name": "redux-sandbox",
   "version": "1.0.0",
-  "description": "Redux sandbox",
+  "description": "Redux sandbox to play with batteries included - local development server watching for changes, ES6 transpilation, no global npm packages needed",
   "main": "app.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
@@ -19,6 +19,7 @@
     "browser-sync": "^2.26.7",
     "redux": "^4.0.5"
   },
+  "repository": "https://github.com/hom3r/redux-sandbox",
   "devDependencies": {
     "@babel/core": "^7.8.4",
     "@babel/preset-env": "^7.8.4",
