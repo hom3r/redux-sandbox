@@ -4,20 +4,21 @@
   "description": "Redux sandbox to play with batteries included - local development server watching for changes, ES6 transpilation, no global npm packages needed",
   "main": "app.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
+    "test": "jest",
     "build": "./node_modules/.bin/browserify -v -t babelify ./client.js -o dist/bundle.js",
     "serve": "node server.js",
     "watch": "npm run extra:mkdir && npm run extra:watchify",
     "dev": "./node_modules/.bin/concurrently \"npm run watch\" \"npm run extra:browsersync\"",
     "extra:browsersync": "./node_modules/.bin/browser-sync start --server --files . --ignore dist/",
     "extra:mkdir": "./node_modules/.bin/mkdirp -p dist",
-    "extra:watchify": "./node_modules/.bin/watchify -v -t babelify client.js -o dist/bundle.js" 
+    "extra:watchify": "./node_modules/.bin/watchify -v -t babelify client.js -o dist/bundle.js"
   },
   "author": "David Beran",
   "license": "ISC",
   "dependencies": {
     "browser-sync": "^2.26.7",
-    "redux": "^4.0.5"
+    "redux": "^4.0.5",
+    "vue": "^2.6.11"
   },
   "repository": "https://github.com/hom3r/redux-sandbox",
   "devDependencies": {
@@ -27,6 +28,7 @@
     "browserify": "^16.5.0",
     "concurrently": "^5.1.0",
     "express": "^4.17.1",
+    "jest": "^25.1.0",
     "mkdirp": "^1.0.3",
     "watchify": "^3.11.1"
   }

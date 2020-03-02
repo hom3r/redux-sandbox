@@ -6,9 +6,16 @@
 </head>
 <body>
     <h1>Redux Sandbox</h1>
-    Counter: <span id="counter"></span> <br>
-    <button onclick="increment()">Increment</button>
-    <button onclick="decrement()">Decrement</button>
+
+    <div id="vue-app">
+        <todo-list></todo-list>
+        
+        Counter: <span id="todos"></span> <br>
+        <button id="addBtn">add</button>
+        <button id="removeBtn">remove</button>
+
+        message: {{ message }}
+    </div>
     <script src="dist/bundle.js"></script>
 </body>
 </html>
